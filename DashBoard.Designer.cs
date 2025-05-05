@@ -180,6 +180,7 @@
             // 
             // gbActiveStudents
             // 
+            this.gbActiveStudents.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gbActiveStudents.Controls.Add(this.lblActiveAmount);
             this.gbActiveStudents.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbActiveStudents.Location = new System.Drawing.Point(208, 12);
@@ -201,6 +202,7 @@
             // 
             // gbInactiveStudents
             // 
+            this.gbInactiveStudents.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gbInactiveStudents.Controls.Add(this.lblInactiveAmount);
             this.gbInactiveStudents.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbInactiveStudents.Location = new System.Drawing.Point(414, 12);

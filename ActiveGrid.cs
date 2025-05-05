@@ -26,8 +26,8 @@ namespace Garica0211
             Worksheet sheet = book.Worksheets[0];
             DataTable dt = sheet.ExportDataTable();
             dtgActive.DataSource = dt;
-
-            int a = 9, b = 10, c = 12, d = 13;
+            dt.DefaultView.RowFilter = "Active = TRUE";
+            int a = 8, b = 9, c = 11, d = 12;
             dtgActive.Columns[a].Visible = false;            
             dtgActive.Columns[b].Visible = false;
             dtgActive.Columns[c].Visible = false;
