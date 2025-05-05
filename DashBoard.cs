@@ -99,11 +99,25 @@ namespace Garica0211
             f1.Show();
             Close();
         }
-
+ 
         private void btnExit_Click(object sender, EventArgs e)        
         {
            Application.Exit();
         }
-        
+
+        private void btnActiveStudents_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Logs_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnInactiveStudents_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
