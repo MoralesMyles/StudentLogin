@@ -17,7 +17,7 @@ namespace Garica0211
             //gggg
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SignIn());
+            Application.Run(new ActiveGrid());
         }
     }
 }
