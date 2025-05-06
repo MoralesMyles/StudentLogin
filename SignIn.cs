@@ -30,6 +30,7 @@ namespace Garica0211
         {
             InitializeComponent();
             LoadExcelFile();
+            picLogo.Image = Image.FromFile(@"https://png.pngtree.com//png-clipart//20211017//original//pngtree-school-logo-png-image_6851480.png");
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -68,9 +69,10 @@ namespace Garica0211
                     }
 
                     book.SaveToFile(@"C:\Users\ACT-STUDENT\Desktop\Garica0303\ref\DataSheet.xlsx", ExcelVersion.Version2016);
-                    DataTable dt = sheet.ExportDataTable();                    
+                    DataTable dt = sheet.ExportDataTable();
+                    this.Hide();
                     f3.Show();
-                    Hide();
+                    
                 }
             }
             else 

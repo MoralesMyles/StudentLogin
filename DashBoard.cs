@@ -27,6 +27,7 @@ namespace Garica0211
         public DashBoard()
         {
             InitializeComponent();
+            picProfile.Image = Image.FromFile(@"https://png.pngtree.com//png-vector//20190223//ourmid//pngtree-student-glyph-black-icon-png-image_691145.jpg");
             LoadExcelFile();
             string Date;
             Date = ($"{Convert.ToString(DateTime.Now.Month)}/{Convert.ToString(DateTime.Now.Day)}/{Convert.ToString(DateTime.Now.Year)}");
@@ -95,9 +96,9 @@ namespace Garica0211
             book.SaveToFile(@"C:\Users\ACT-STUDENT\Desktop\Garica0303\ref\DataSheet.xlsx", ExcelVersion.Version2016);
 
             SignIn f1 = new SignIn();
-            Hide();
-            f1.Show();
-            Close();
+            this.Hide();
+            f1.ShowDialog();
+            this.Close();
         }
  
         private void btnExit_Click(object sender, EventArgs e)        
@@ -108,7 +109,10 @@ namespace Garica0211
         //Need to code this
         private void btnActiveStudents_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            ActiveGrid f3 = new ActiveGrid();
+            f3.ShowDialog();
+            
         }
 
         private void Logs_Click(object sender, EventArgs e)
@@ -118,6 +122,10 @@ namespace Garica0211
 
         private void btnInactiveStudents_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            InactiveGrid f4 = new InactiveGrid();
+            f4.ShowDialog();
+
 
         }
     }

@@ -11,14 +11,12 @@ using System.Windows.Forms;
 
 namespace Garica0211
 {
-    public partial class ActiveGrid: Form
+    public partial class InactiveGrid: Form
     {
-        DashBoard db = new DashBoard();
-        public ActiveGrid()
+        public InactiveGrid()
         {
             InitializeComponent();
             LoadExcelFile();
-
         }
         public void LoadExcelFile()
         {
@@ -27,9 +25,9 @@ namespace Garica0211
             Worksheet sheet = book.Worksheets[0];
             DataTable dt = sheet.ExportDataTable();
             dtgActive.DataSource = dt;
-            dt.DefaultView.RowFilter = "Active = TRUE";
+            dt.DefaultView.RowFilter = "Active = FALSE";
             int a = 8, b = 9, c = 11, d = 12;
-            dtgActive.Columns[a].Visible = false;            
+            dtgActive.Columns[a].Visible = false;
             dtgActive.Columns[b].Visible = false;
             dtgActive.Columns[c].Visible = false;
             dtgActive.Columns[d].Visible = false;
