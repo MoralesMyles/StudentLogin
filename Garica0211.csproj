@@ -129,6 +129,7 @@
     <Compile Include="LogGrid.Designer.cs">
       <DependentUpon>LogGrid.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logs.cs" />
     <Compile Include="SignIn.cs">
       <SubType>Form</SubType>
     </Compile>
