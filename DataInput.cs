@@ -19,7 +19,7 @@ namespace Garica0211
         Workbook book = new Workbook();
         public void LoadExcelFile() 
         {           
-            book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Garica0303\ref\DataSheet.xlsx");
+            book.LoadFromFile(@"C:\Users\ACT-STUDENT\source\repos\StudentLogin\ref\DataSheet.xlsx");
             Worksheet sheet = book.Worksheets[0];
             DataTable dt = sheet.ExportDataTable();
         }
@@ -63,7 +63,7 @@ namespace Garica0211
         }
         public string checkUnique()
         {
-            book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Garica0303\ref\DataSheet.xlsx");
+            book.LoadFromFile(@"C:\Users\ACT-STUDENT\source\repos\StudentLogin\ref\DataSheet.xlsx");
             Worksheet sheet = book.Worksheets[0];
             string exist = "";
 
@@ -105,7 +105,7 @@ namespace Garica0211
         {            
             lblMessage.Text = checkEmpty();
             lblMessage.Text += checkUnique();
-            book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Garica0303\ref\DataSheet.xlsx");
+            book.LoadFromFile(@"C:\Users\ACT-STUDENT\source\repos\StudentLogin\ref\DataSheet.xlsx");
             Worksheet sheet = book.Worksheets[0];
 
             int row = sheet.Rows.Length + 1;
@@ -151,7 +151,7 @@ namespace Garica0211
             if (lblMessage.Text == "")
             {
                 lblMessage.Visible = false;
-                book.SaveToFile(@"C:\Users\ACT-STUDENT\Desktop\Garica0303\ref\DataSheet.xlsx", ExcelVersion.Version2016);
+                book.SaveToFile(@"C:\Users\ACT-STUDENT\source\repos\StudentLogin\ref\DataSheet.xlsx", ExcelVersion.Version2016);
             } else
             {
                 lblMessage.Visible = true;
@@ -171,7 +171,7 @@ namespace Garica0211
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             Random rdm = new Random();
-            book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Garica0303\ref\DataSheet.xlsx");
+            book.LoadFromFile(@"C:\Users\ACT-STUDENT\source\repos\StudentLogin\ref\DataSheet.xlsx");
             Worksheet sheet = book.Worksheets[0];
 
             int row = Convert.ToInt16(lblRow.Text) + 2;
@@ -222,7 +222,7 @@ namespace Garica0211
             else
             { sheet.Range[row, 12].Value = "TRUE"; }
 
-                book.SaveToFile(@"C:\Users\ACT-STUDENT\Desktop\Garica0303\ref\DataSheet.xlsx", ExcelVersion.Version2016);
+                book.SaveToFile(@"C:\Users\ACT-STUDENT\source\repos\StudentLogin\ref\DataSheet.xlsx", ExcelVersion.Version2016);
             DataTable dt = sheet.ExportDataTable();
             f3.dtgInfoSheet.DataSource = dt;
         }
