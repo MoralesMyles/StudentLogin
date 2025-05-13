@@ -20,7 +20,7 @@ namespace Garica0211
         public void LoadExcelFile()
         {
             Workbook book = new Workbook();
-            book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Garica0303\ref\DataSheet.xlsx");
+            book.LoadFromFile(@"C:\Users\ACT-STUDENT\source\repos\StudentLogin\ref\DataSheet.xlsx");
             Worksheet sheet = book.Worksheets[0];
             DataTable dt = sheet.ExportDataTable();
         }
@@ -28,6 +28,7 @@ namespace Garica0211
         {
             InitializeComponent();
             LoadExcelFile();
+            ProfilePic();
             string Date;
             Date = ($"{Convert.ToString(DateTime.Now.Month)}/{Convert.ToString(DateTime.Now.Day)}/{Convert.ToString(DateTime.Now.Year)}");
             lblDate.Text = Date;
@@ -48,7 +49,7 @@ namespace Garica0211
         }
         public int showcount(int c, string val)
         {
-            book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Garica0303\ref\DataSheet.xlsx");
+            book.LoadFromFile(@"C:\Users\ACT-STUDENT\source\repos\StudentLogin\ref\DataSheet.xlsx");
             Worksheet sheet = book.Worksheets[0];
             int row = sheet.Rows.Length;
             int counter = 0;
@@ -60,6 +61,29 @@ namespace Garica0211
                 }
             }
             return counter;
+        }
+
+        public void ProfilePic()
+        {
+            book.LoadFromFile(@"C:\Users\ACT-STUDENT\source\repos\StudentLogin\ref\DataSheet.xlsx");
+            Worksheet sheet = book.Worksheets[0];
+            int row = sheet.Rows.Length;
+            for (int i = 2; i <= row; i++)
+            {
+                if (sheet.Range[i, 1].Value == lblName.Text)
+                {
+                    if (sheet.Range[i, 2].Value == "Male") 
+                    { 
+                        picProfile.Image = Image.FromFile(@"C:\Users\ACT-STUDENT\source\repos\StudentLogin\ref\Male_Student.jpg");
+                        
+                    }
+                    else if (sheet.Range[i, 2].Value == "Female")
+                    {
+                        picProfile.Image = Image.FromFile(@"C:\Users\ACT-STUDENT\source\repos\StudentLogin\ref\FemaleStudent.jpg");                        
+                    }                   
+                }
+            }
+
         }
 
         private void tmrRefresh_Tick(object sender, EventArgs e)
@@ -79,7 +103,7 @@ namespace Garica0211
         private void Logout_Click(object sender, EventArgs e)
         {
             Workbook book = new Workbook();
-            book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Garica0303\ref\DataSheet.xlsx");
+            book.LoadFromFile(@"C:\Users\ACT-STUDENT\source\repos\StudentLogin\ref\DataSheet.xlsx");
             Worksheet sheet = book.Worksheets[0];
             DataTable dt = sheet.ExportDataTable();
 
@@ -92,12 +116,12 @@ namespace Garica0211
                     break;
                 }
             }
-            book.SaveToFile(@"C:\Users\ACT-STUDENT\Desktop\Garica0303\ref\DataSheet.xlsx", ExcelVersion.Version2016);
+            book.SaveToFile(@"C:\Users\ACT-STUDENT\source\repos\StudentLogin\ref\DataSheet.xlsx", ExcelVersion.Version2016);
 
             SignIn f1 = new SignIn();
-            Hide();
-            f1.Show();
-            Close();
+            this.Hide();
+            f1.ShowDialog();
+            this.Close();
         }
  
         private void btnExit_Click(object sender, EventArgs e)        
@@ -108,16 +132,25 @@ namespace Garica0211
         //Need to code this
         private void btnActiveStudents_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            ActiveGrid f3 = new ActiveGrid();
+            f3.ShowDialog();
+            
         }
 
         private void Logs_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            LogGrid f4 = new LogGrid();
+            f4.ShowDialog();
         }
 
         private void btnInactiveStudents_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            InactiveGrid f4 = new InactiveGrid();
+            f4.ShowDialog();
+
 
         }
     }

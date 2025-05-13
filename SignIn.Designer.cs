@@ -35,12 +35,14 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(119, 82);
+            this.txtPassword.Location = new System.Drawing.Point(220, 123);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(153, 22);
             this.txtPassword.TabIndex = 41;
@@ -50,7 +52,7 @@
             // 
             this.lblPasswordTitle.AutoSize = true;
             this.lblPasswordTitle.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasswordTitle.Location = new System.Drawing.Point(12, 84);
+            this.lblPasswordTitle.Location = new System.Drawing.Point(113, 125);
             this.lblPasswordTitle.Name = "lblPasswordTitle";
             this.lblPasswordTitle.Size = new System.Drawing.Size(106, 16);
             this.lblPasswordTitle.TabIndex = 40;
@@ -59,7 +61,7 @@
             // txtUser
             // 
             this.txtUser.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(119, 45);
+            this.txtUser.Location = new System.Drawing.Point(220, 86);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(153, 22);
             this.txtUser.TabIndex = 39;
@@ -68,7 +70,7 @@
             // 
             this.lblUsernameTitle.AutoSize = true;
             this.lblUsernameTitle.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsernameTitle.Location = new System.Drawing.Point(12, 47);
+            this.lblUsernameTitle.Location = new System.Drawing.Point(113, 88);
             this.lblUsernameTitle.Name = "lblUsernameTitle";
             this.lblUsernameTitle.Size = new System.Drawing.Size(106, 16);
             this.lblUsernameTitle.TabIndex = 38;
@@ -77,7 +79,7 @@
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(151, 143);
+            this.btnLogin.Location = new System.Drawing.Point(252, 160);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(82, 29);
             this.btnLogin.TabIndex = 42;
@@ -88,7 +90,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(292, 158);
+            this.lblName.Location = new System.Drawing.Point(-1, 189);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(35, 13);
             this.lblName.TabIndex = 43;
@@ -106,12 +108,22 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.Exit_Click);
             // 
+            // picLogo
+            // 
+            this.picLogo.Location = new System.Drawing.Point(2, 4);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(107, 104);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogo.TabIndex = 45;
+            this.picLogo.TabStop = false;
+            // 
             // SignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(385, 201);
             this.ControlBox = false;
+            this.Controls.Add(this.picLogo);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.btnLogin);
@@ -121,6 +133,7 @@
             this.Controls.Add(this.lblUsernameTitle);
             this.Name = "SignIn";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,6 +148,7 @@
         private System.Windows.Forms.Button btnLogin;
         public System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.PictureBox picLogo;
     }
 }
 

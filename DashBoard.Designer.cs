@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
             this.gbMenu = new System.Windows.Forms.GroupBox();
+            this.picProfile = new System.Windows.Forms.PictureBox();
             this.btnNewStudent = new System.Windows.Forms.Button();
             this.Logout = new System.Windows.Forms.Button();
             this.Logs = new System.Windows.Forms.Button();
@@ -64,14 +66,13 @@
             this.tmrRefresh = new System.Windows.Forms.Timer(this.components);
             this.lblHybridCount = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
-            this.picProfile = new System.Windows.Forms.PictureBox();
             this.gbMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             this.gbActiveStudents.SuspendLayout();
             this.gbInactiveStudents.SuspendLayout();
             this.gbGender.SuspendLayout();
             this.gbCourse.SuspendLayout();
             this.gbHobbies.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             this.SuspendLayout();
             // 
             // gbMenu
@@ -92,6 +93,16 @@
             this.gbMenu.Size = new System.Drawing.Size(210, 436);
             this.gbMenu.TabIndex = 0;
             this.gbMenu.TabStop = false;
+            // 
+            // picProfile
+            // 
+            this.picProfile.Image = ((System.Drawing.Image)(resources.GetObject("picProfile.Image")));
+            this.picProfile.Location = new System.Drawing.Point(46, 18);
+            this.picProfile.Name = "picProfile";
+            this.picProfile.Size = new System.Drawing.Size(118, 107);
+            this.picProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picProfile.TabIndex = 8;
+            this.picProfile.TabStop = false;
             // 
             // btnNewStudent
             // 
@@ -172,7 +183,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(71, 127);
+            this.lblName.Location = new System.Drawing.Point(71, 130);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(63, 16);
             this.lblName.TabIndex = 0;
@@ -180,6 +191,7 @@
             // 
             // gbActiveStudents
             // 
+            this.gbActiveStudents.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.gbActiveStudents.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gbActiveStudents.Controls.Add(this.lblActiveAmount);
             this.gbActiveStudents.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -202,6 +214,7 @@
             // 
             // gbInactiveStudents
             // 
+            this.gbInactiveStudents.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.gbInactiveStudents.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gbInactiveStudents.Controls.Add(this.lblInactiveAmount);
             this.gbInactiveStudents.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -224,6 +237,7 @@
             // 
             // gbGender
             // 
+            this.gbGender.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.gbGender.Controls.Add(this.lblFemaleAmount);
             this.gbGender.Controls.Add(this.lblMaleAmount);
             this.gbGender.Controls.Add(this.lblFemaleTitle);
@@ -278,6 +292,7 @@
             // 
             // gbCourse
             // 
+            this.gbCourse.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.gbCourse.Controls.Add(this.lblBSCECount);
             this.gbCourse.Controls.Add(this.lblBSCE);
             this.gbCourse.Controls.Add(this.lblBScSCount);
@@ -376,6 +391,7 @@
             // 
             // gbHobbies
             // 
+            this.gbHobbies.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.gbHobbies.Controls.Add(this.lblVolleyballAmount);
             this.gbHobbies.Controls.Add(this.lblBasketballCount);
             this.gbHobbies.Controls.Add(this.lblVolleyballTitle);
@@ -455,19 +471,11 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // picProfile
-            // 
-            this.picProfile.Location = new System.Drawing.Point(46, 18);
-            this.picProfile.Name = "picProfile";
-            this.picProfile.Size = new System.Drawing.Size(118, 104);
-            this.picProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picProfile.TabIndex = 8;
-            this.picProfile.TabStop = false;
-            // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 408);
             this.ControlBox = false;
             this.Controls.Add(this.btnExit);
@@ -482,6 +490,7 @@
             this.Text = "DashBoard";
             this.gbMenu.ResumeLayout(false);
             this.gbMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
             this.gbActiveStudents.ResumeLayout(false);
             this.gbActiveStudents.PerformLayout();
             this.gbInactiveStudents.ResumeLayout(false);
@@ -492,7 +501,6 @@
             this.gbCourse.PerformLayout();
             this.gbHobbies.ResumeLayout(false);
             this.gbHobbies.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

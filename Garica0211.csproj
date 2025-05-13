@@ -117,6 +117,18 @@
     <Compile Include="DashBoard.Designer.cs">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="InactiveGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InactiveGrid.Designer.cs">
+      <DependentUpon>InactiveGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogGrid.Designer.cs">
+      <DependentUpon>LogGrid.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +154,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InactiveGrid.resx">
+      <DependentUpon>InactiveGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogGrid.resx">
+      <DependentUpon>LogGrid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>

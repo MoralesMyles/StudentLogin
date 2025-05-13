@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace Garica0211
 
         public void LoadExcelFile()
         {
-           book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Garica0303\ref\DataSheet.xlsx");
+           book.LoadFromFile(@"C:\Users\ACT-STUDENT\source\repos\StudentLogin\ref\DataSheet.xlsx");
             Worksheet sheet = book.Worksheets[0];
             DataTable dt = sheet.ExportDataTable();
         }
@@ -30,11 +31,12 @@ namespace Garica0211
         {
             InitializeComponent();
             LoadExcelFile();
+            picLogo.Image = Image.FromFile(@"C:\Users\ACT-STUDENT\source\repos\StudentLogin\ref\SchoolLogo.jpg");
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Garica0303\ref\DataSheet.xlsx");
+            book.LoadFromFile(@"C:\Users\ACT-STUDENT\source\repos\StudentLogin\ref\DataSheet.xlsx");
             Worksheet sheet = book.Worksheets[0];
 
             int row = sheet.Rows.Length;
@@ -67,10 +69,11 @@ namespace Garica0211
                         }
                     }
 
-                    book.SaveToFile(@"C:\Users\ACT-STUDENT\Desktop\Garica0303\ref\DataSheet.xlsx", ExcelVersion.Version2016);
-                    DataTable dt = sheet.ExportDataTable();                    
+                    book.SaveToFile(@"C:\Users\ACT-STUDENT\source\repos\StudentLogin\ref\DataSheet.xlsx", ExcelVersion.Version2016);
+                    DataTable dt = sheet.ExportDataTable();
+                    this.Hide();
                     f3.Show();
-                    Hide();
+                    
                 }
             }
             else 
