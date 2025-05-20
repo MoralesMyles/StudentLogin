@@ -65,9 +65,12 @@ namespace Garica0211
                     {
                         if (sheet.Range[i, 9].Value == txtUser.Text)
                         {
-                            sheet.Range[row, 12].Value = "TRUE";
+                            sheet.Range[row, 12].Value = "TRUE";                            
                         }
                     }
+                    f3.lblUser.Text = txtUser.Text;
+                    MyLog nlog = new MyLog();
+                    nlog.InsertLog(txtUser.Text, "User have logged in");
 
                     book.SaveToFile(@"C:\Users\ACT-STUDENT\source\repos\StudentLogin\ref\DataSheet.xlsx", ExcelVersion.Version2016);
                     DataTable dt = sheet.ExportDataTable();

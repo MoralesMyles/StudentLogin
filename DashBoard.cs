@@ -118,6 +118,9 @@ namespace Garica0211
             }
             book.SaveToFile(@"C:\Users\ACT-STUDENT\source\repos\StudentLogin\ref\DataSheet.xlsx", ExcelVersion.Version2016);
 
+            MyLog nlog = new MyLog();
+            nlog.InsertLog(lblUser.Text, "Logged out");
+
             SignIn f1 = new SignIn();
             this.Hide();
             f1.ShowDialog();
@@ -126,12 +129,16 @@ namespace Garica0211
  
         private void btnExit_Click(object sender, EventArgs e)        
         {
-           Application.Exit();
+            MyLog nlog = new MyLog();
+            nlog.InsertLog(lblUser.Text, "Exited the Application");
+            Application.Exit();
         }
 
         //Need to code this
         private void btnActiveStudents_Click(object sender, EventArgs e)
         {
+            MyLog nlog = new MyLog();
+            nlog.InsertLog(lblUser.Text, "Clicked Active button");
             this.Hide();
             ActiveGrid f3 = new ActiveGrid();
             f3.ShowDialog();
@@ -140,6 +147,8 @@ namespace Garica0211
 
         private void Logs_Click(object sender, EventArgs e)
         {
+            MyLog nlog = new MyLog();
+            nlog.InsertLog(lblUser.Text, "Clicked Logs Button");
             this.Hide();
             LogGrid f4 = new LogGrid();
             f4.ShowDialog();
@@ -147,6 +156,8 @@ namespace Garica0211
 
         private void btnInactiveStudents_Click(object sender, EventArgs e)
         {
+            MyLog nlog = new MyLog();
+            nlog.InsertLog(lblUser.Text, "Clicked Inavtive Button");
             this.Hide();
             InactiveGrid f4 = new InactiveGrid();
             f4.ShowDialog();
