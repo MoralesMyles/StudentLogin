@@ -31,6 +31,7 @@
             this.dtgActive = new System.Windows.Forms.DataGridView();
             this.btnReturn = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnActive = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgActive)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,6 +65,16 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnActive
+            // 
+            this.btnActive.Font = new System.Drawing.Font("Lucida Bright", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActive.Location = new System.Drawing.Point(12, 50);
+            this.btnActive.Name = "btnActive";
+            this.btnActive.Size = new System.Drawing.Size(129, 32);
+            this.btnActive.TabIndex = 14;
+            this.btnActive.Text = "Active";
+            this.btnActive.UseVisualStyleBackColor = true;
+            // 
             // ActiveGrid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -71,6 +82,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 311);
             this.ControlBox = false;
+            this.Controls.Add(this.btnActive);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.dtgActive);
@@ -86,5 +98,6 @@
         private System.Windows.Forms.DataGridView dtgActive;
         public System.Windows.Forms.Button btnReturn;
         public System.Windows.Forms.Button btnExit;
+        public System.Windows.Forms.Button btnActive;
     }
 }
