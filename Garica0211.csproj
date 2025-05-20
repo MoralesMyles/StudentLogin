@@ -123,12 +123,14 @@
     <Compile Include="InactiveGrid.Designer.cs">
       <DependentUpon>InactiveGrid.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyLog.cs" />
     <Compile Include="LogGrid.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LogGrid.Designer.cs">
       <DependentUpon>LogGrid.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logs.cs" />
     <Compile Include="SignIn.cs">
       <SubType>Form</SubType>
     </Compile>

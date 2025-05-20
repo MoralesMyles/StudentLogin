@@ -66,6 +66,7 @@
             this.tmrRefresh = new System.Windows.Forms.Timer(this.components);
             this.lblHybridCount = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
+            this.lblUser = new System.Windows.Forms.Label();
             this.gbMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             this.gbActiveStudents.SuspendLayout();
@@ -471,6 +472,16 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Location = new System.Drawing.Point(657, 8);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(35, 13);
+            this.lblUser.TabIndex = 46;
+            this.lblUser.Text = "label1";
+            this.lblUser.Visible = false;
+            // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -478,6 +489,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 408);
             this.ControlBox = false;
+            this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblHybridCount);
             this.Controls.Add(this.gbCourse);
@@ -543,5 +555,6 @@
         public System.Windows.Forms.Button btnNewStudent;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.PictureBox picProfile;
+        public System.Windows.Forms.Label lblUser;
     }
 }

@@ -15,6 +15,15 @@ namespace Garica0211
         public LogGrid()
         {
             InitializeComponent();
+            LoadExcelFile();
+        }
+        public void LoadExcelFile()
+        {
+            Workbook book = new Workbook();
+            book.LoadFromFile(@"C:\Users\ACT-STUDENT\source\repos\StudentLogin\ref\DataSheet.xlsx");
+            Worksheet sheet = book.Worksheets[1];
+            DataTable dt = sheet.ExportDataTable();
+            dtgLog.DataSource = dt;
         }
 
         private void btnReturn_Click(object sender, EventArgs e)

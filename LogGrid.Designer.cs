@@ -30,8 +30,8 @@
         {
             this.btnExit = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
-            this.dtgActive = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgActive)).BeginInit();
+            this.dtgLog = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgLog)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
@@ -56,13 +56,13 @@
             this.btnReturn.UseVisualStyleBackColor = true;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
-            // dtgActive
+            // dtgLog
             // 
-            this.dtgActive.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgActive.Location = new System.Drawing.Point(141, 0);
-            this.dtgActive.Name = "dtgActive";
-            this.dtgActive.Size = new System.Drawing.Size(653, 311);
-            this.dtgActive.TabIndex = 13;
+            this.dtgLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgLog.Location = new System.Drawing.Point(141, 0);
+            this.dtgLog.Name = "dtgLog";
+            this.dtgLog.Size = new System.Drawing.Size(653, 311);
+            this.dtgLog.TabIndex = 13;
             // 
             // LogGrid
             // 
@@ -72,10 +72,10 @@
             this.ClientSize = new System.Drawing.Size(800, 311);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnReturn);
-            this.Controls.Add(this.dtgActive);
+            this.Controls.Add(this.dtgLog);
             this.Name = "LogGrid";
             this.Text = "LogGrid";
-            ((System.ComponentModel.ISupportInitialize)(this.dtgActive)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgLog)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -84,6 +84,6 @@
 
         public System.Windows.Forms.Button btnExit;
         public System.Windows.Forms.Button btnReturn;
-        private System.Windows.Forms.DataGridView dtgActive;
+        private System.Windows.Forms.DataGridView dtgLog;
     }
 }
