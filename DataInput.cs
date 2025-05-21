@@ -15,7 +15,8 @@ namespace Garica0211
 {
     public partial class DataInput : Form
     {
-        DataGrid f3 = new DataGrid();
+        DashBoard db = new DashBoard();
+        DataGrid dg = new DataGrid();
         Workbook book = new Workbook();
         public void LoadExcelFile() 
         {           
@@ -158,13 +159,18 @@ namespace Garica0211
                 return;
             }
                 DataTable dt = sheet.ExportDataTable();
-            f3.dtgInfoSheet.DataSource = dt;
+            dg.dtgInfoSheet.DataSource = dt;
+
+            MyLog nlog = new MyLog();
+            nlog.InsertLog(db.lblUser.Text, "Added new student");
 
         }
 
         private void btnDisplay_Click(object sender, EventArgs e)
         {
-            f3.Show();
+            MyLog nlog = new MyLog();
+            nlog.InsertLog(db.lblUser.Text, "Opened Student List");
+            dg.Show();
             btnDisplay.Enabled = false;
         }
 
@@ -224,7 +230,9 @@ namespace Garica0211
 
                 book.SaveToFile(@"C:\Users\ACT-STUDENT\source\repos\StudentLogin\ref\DataSheet.xlsx", ExcelVersion.Version2016);
             DataTable dt = sheet.ExportDataTable();
-            f3.dtgInfoSheet.DataSource = dt;
+            dg.dtgInfoSheet.DataSource = dt;
+            MyLog nlog = new MyLog();
+            nlog.InsertLog(db.lblUser.Text, "Updated Student Information");
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
@@ -232,7 +240,7 @@ namespace Garica0211
             if (btnDisplay.Enabled == false)
             {
                 this.Hide();
-                f3.Hide();
+                dg.Hide();
             }
             else
             {

@@ -47,5 +47,11 @@ namespace Garica0211
         {
             Application.Exit();
         }
+
+        private void btnActive_Click(object sender, EventArgs e)
+        {
+            MyLog nlog = new MyLog();
+            nlog.InsertLog(db.lblUser.Text, "Set to Student Active");
+        }
     }
 }

@@ -32,6 +32,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.lblDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgInfoSheet)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,6 +79,17 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // lblDelete
+            // 
+            this.lblDelete.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDelete.Location = new System.Drawing.Point(12, 409);
+            this.lblDelete.Name = "lblDelete";
+            this.lblDelete.Size = new System.Drawing.Size(128, 33);
+            this.lblDelete.TabIndex = 50;
+            this.lblDelete.Text = "Delete";
+            this.lblDelete.UseVisualStyleBackColor = true;
+            this.lblDelete.Click += new System.EventHandler(this.lblDelete_Click);
+            // 
             // DataGrid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -85,6 +97,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.lblDelete);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnClose);
@@ -104,5 +117,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button lblDelete;
     }
 }

@@ -74,6 +74,7 @@
             this.btnInactive.TabIndex = 13;
             this.btnInactive.Text = "Inactive";
             this.btnInactive.UseVisualStyleBackColor = true;
+            this.btnInactive.Click += new System.EventHandler(this.btnInactive_Click);
             // 
             // InactiveGrid
             // 

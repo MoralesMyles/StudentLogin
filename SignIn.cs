@@ -48,6 +48,7 @@ namespace Garica0211
                 if (sheet.Range[i, 9].Value == txtUser.Text && sheet.Range[i, 10].Value == txtPassword.Text)
                 {
                     f3.lblName.Text = sheet.Range[i, 1].Value;
+                    f3.lblUser.Text = txtUser.Text;
                     log = true; break;
                 }
                 else 
@@ -67,8 +68,7 @@ namespace Garica0211
                         {
                             sheet.Range[row, 12].Value = "TRUE";                            
                         }
-                    }
-                    f3.lblUser.Text = txtUser.Text;
+                    }                    
                     MyLog nlog = new MyLog();
                     nlog.InsertLog(txtUser.Text, "User have logged in");
 

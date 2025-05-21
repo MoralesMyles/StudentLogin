@@ -14,8 +14,7 @@ namespace Garica0211
 {
     public partial class DashBoard: Form
     {
-        SignIn f1 = (SignIn)Application.OpenForms["SignIn"];
-        DataInput f2 = new DataInput();
+        SignIn f1 = (SignIn)Application.OpenForms["SignIn"];        
         public Workbook book = new Workbook();
         public void LoadExcelFile()
         {
@@ -93,6 +92,10 @@ namespace Garica0211
 
         private void btnNewStudent_Click(object sender, EventArgs e)
         {
+            DataInput f2 = new DataInput();
+
+            MyLog nlog = new MyLog();
+            nlog.InsertLog(lblUser.Text, "Is registering new Student");
             {
                 if (f2.btnDisplay.Enabled == false)
                 { f2.btnDisplay.Enabled = true; }
@@ -130,7 +133,7 @@ namespace Garica0211
         private void btnExit_Click(object sender, EventArgs e)        
         {
             MyLog nlog = new MyLog();
-            nlog.InsertLog(lblUser.Text, "Exited the Application");
+            nlog.InsertLog(lblUser.Text, "Logged out");
             Application.Exit();
         }
 

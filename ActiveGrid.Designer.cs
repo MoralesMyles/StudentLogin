@@ -74,6 +74,7 @@
             this.btnActive.TabIndex = 14;
             this.btnActive.Text = "Active";
             this.btnActive.UseVisualStyleBackColor = true;
+            this.btnActive.Click += new System.EventHandler(this.btnActive_Click);
             // 
             // ActiveGrid
             // 

@@ -107,5 +107,26 @@ namespace Garica0211
                 }
             }
         }
+
+        private void lblDelete_Click(object sender, EventArgs e)
+        {
+            Workbook book = new Workbook();
+            book.LoadFromFile(@"C:\Users\ACT-STUDENT\source\repos\StudentLogin\ref\DataSheet.xlsx");
+            Worksheet sheet = book.Worksheets[0];
+            MessageBox.Show(Convert.ToString(dtgInfoSheet.SelectedCells.Count));
+            int row = sheet.Rows.Length + 1, col = sheet.Columns.Length, sel = dtgInfoSheet.SelectedCells.Count;
+            for (int i = 2; i < row; i++)
+            {
+                for (int j = 1; j <= col; j++)
+                {
+                    
+                }
+            }
+
+
+
+
+            
+        }
     }
 }

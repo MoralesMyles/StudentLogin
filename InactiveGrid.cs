@@ -13,6 +13,7 @@ namespace Garica0211
 {
     public partial class InactiveGrid: Form
     {
+        DashBoard db = new DashBoard();
         public InactiveGrid()
         {
             InitializeComponent();
@@ -44,6 +45,12 @@ namespace Garica0211
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnInactive_Click(object sender, EventArgs e)
+        {
+            MyLog nlog = new MyLog();
+            nlog.InsertLog(db.lblUser.Text, "Set a student to Inactive");
         }
     }
 }
